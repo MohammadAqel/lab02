@@ -1,5 +1,5 @@
 'use strict';
-
+let result=0;
 let name1 = prompt('enter your name please');
 alert ('you are wilcome '+name1);
 
@@ -8,6 +8,7 @@ switch (name2.toUpperCase())
 {
 case 'YES':
 case 'Y':
+  result=result+1;
   alert('whak about you ?');
   console.log(name2);
   break;
@@ -23,11 +24,13 @@ switch (size.toUpperCase())
 {
 case 'YES':
 case 'Y':
+
   alert('Wrong');
   console.log(size);
   break;
 case 'NO':
 case 'N':
+  result=result+1;
   alert('You guessed it');
   console.log(size);
   break;
@@ -38,6 +41,7 @@ switch (major.toLowerCase())
 {
 case 'yes':
 case 'y':  
+result=result+1;
   alert('It is Correct !');
   console.log(major);
   break;
@@ -55,6 +59,7 @@ switch (talent.toLowerCase())
 {
 case 'yes':
 case 'y':
+  result=result+1;
   alert('Let is sing !!!');
   console.log(talent);
   break;
@@ -77,10 +82,56 @@ case 'y':
   break;
 case 'no':
 case 'n':
+  result=result+1;
   alert('NOOOO!');
   console.log(car);
   break;
 default:
   console.log('default');
-  alert('default');
+  alert('you lost 1 mark');
+
 } 
+  
+alert('You have 4 guesses, guess from 1-100');
+
+let answer = 80;
+let guess = prompt('what is my wight ?');
+
+for (let i=0;i<=4;i++){
+  if (answer === guess){
+    result=result+1;
+    alert('Your guess is true');
+    break;
+  }else{
+    guess = prompt('Try Again');
+  }
+}
+
+let mymove=['lost','no string attached','cast away','22 july','journey','jungle','fast furious','the notebook','rust creek','bloodsh'];
+    
+    
+  for(let a=0;a<6;a++)
+  {
+    let move=prompt('can you guess any of my  moves? \n you have ('+(6-a)+') attempit');
+  
+    for(let i=0;i<mymove.length;i++)
+     {
+      if(move.toLowerCase()===mymove[i])
+        {
+          result=result+1;
+          alert('you gused it ');
+          console.log('hello');
+          i=mymove.length;
+          a=6;
+        }
+     }
+    
+  }
+  let allmove;
+    for(let i=0;i<mymove.length;i++){
+      allmove=allmove+'\n'+mymove[i];
+
+    }
+    alert ('my move are \n'+allmove);
+    alert( 'this is your mark   ( '+result+' )');
+

@@ -17,3 +17,9 @@ body{
 
     background-color: black;
 }
+ol{
+    background-repeat: space;
+}
+ul{
+    color: rgb(43, 1, 1);
+}
