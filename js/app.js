@@ -98,9 +98,9 @@ let answer = 80;
 let guess = prompt('what is my wight ?');
 
 for (let i=0;i<=4;i++){
-  if (answer === guess){
-    result=result+1;
+  if (answer == guess){
     alert('Your guess is true');
+    result=result+1;
     break;
   }else{
     guess = prompt('Try Again');
