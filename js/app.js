@@ -1,10 +1,11 @@
-/'use strict';
+'use strict';
 let result = 0;
 let name1 = prompt('enter your name please');
 alert('you are wilcome ' + name1);
-
-let name2 = prompt('Is my name Mohammad?');
-switch (name2.toUpperCase()) {
+function q1()
+{
+  let name2 = prompt('Is my name Mohammad?');
+  switch (name2.toUpperCase()) {
   case 'YES':
   case 'Y':
     result = result + 1;
@@ -16,10 +17,11 @@ switch (name2.toUpperCase()) {
     alert('nice try !!!');
     console.log(name2);
     break;
+  }
 }
-
-let size = prompt('Am I to Short?');
-switch (size.toUpperCase()) {
+function q2(){
+  let size = prompt('Am I to Short?');
+  switch (size.toUpperCase()) {
   case 'YES':
   case 'Y':
 
@@ -32,10 +34,11 @@ switch (size.toUpperCase()) {
     alert('You guessed it');
     console.log(size);
     break;
+  }
 }
-
-let major = prompt('Is my major software engineering?');
-switch (major.toLowerCase()) {
+function q3 () {
+  let major = prompt('Is my major software engineering?');
+  switch (major.toLowerCase()) {
   case 'yes':
   case 'y':
     result = result + 1;
@@ -47,12 +50,12 @@ switch (major.toLowerCase()) {
     alert('Try Again!!');
     console.log(major);
     break;
+  }
 }
 
-
-
-let talent = prompt('Do I  singer?');
-switch (talent.toLowerCase()) {
+function q4(){
+  let talent = prompt('Do I  singer?');
+  switch (talent.toLowerCase()) {
   case 'yes':
   case 'y':
     result = result + 1;
@@ -64,12 +67,12 @@ switch (talent.toLowerCase()) {
     alert('Wrong choice !!!');
     console.log(talent);
     break;
+  }
 }
 
-
-
-let car = prompt('Is my car type American ?');
-switch (car.toLowerCase()) {
+function q5(){
+  let car = prompt('Is my car type American ?');
+  switch (car.toLowerCase()) {
   case 'yes':
   case 'y':
     alert('Did you like it ?');
@@ -85,60 +88,69 @@ switch (car.toLowerCase()) {
     console.log('default');
     alert('you lost 1 mark');
 
+  }
 }
+function q6(){
+  alert('You have 4 guesses, guess from 1-100');
+  let answer = 80;
+  let guess = prompt('what is my wight ?');
 
-alert('You have 4 guesses, guess from 1-100');
+  for (let i = 0; i < 4; i++) {
 
-let answer = 80;
-let guess = prompt('what is my wight ?');
+    if (answer === Number(guess))
+    {
+      alert('Your guess is true');
+      result = result + 1;
+      break;
 
-for (let i = 0; i < 4; i++) {
-  
-  if (answer === Number(guess)) 
-  {
-    alert('Your guess is true');
-    result = result + 1;
-    break;
-    
-  } else if (guess > answer){
-    guess = prompt('you are very hight    Try Again');
+    } else if (guess > answer){
+      guess = prompt('you are very hight    Try Again');
     }
     else if (guess < answer){
-    guess = prompt('you are very low    Try Again');
-    
+      guess = prompt('you are very low    Try Again');
+
     }
-  console.log(i);
-  if (i=4){
-  alert('you are false and this is true answer'+answer);
+    console.log(i);
+    if (i===4){
+      alert('you are false and this is true answer'+answer);
+
+    }
+  }
+}
+function q7(){
+  let mymove = ['lost', 'no string attached', 'cast away', '22 july', 'journey', 'jungle', 'fast furious', 'the notebook', 'rust creek', 'bloodsh'];
+
+
+  for (let a = 0; a < 6; a++) {
+    let move = prompt('can you guess any of my  moves? \n you have (' + (6 - a) + ') attempit');
+
+    for (let i = 0; i < mymove.length; i++) {
+      if (move.toLowerCase() === mymove[i]) {
+        result = result + 1;
+        alert('you gused it ');
+        console.log('hello');
+        i = mymove.length;
+        a = 6;
+      }
+    }
 
   }
-  }
 
 
-let mymove = ['lost', 'no string attached', 'cast away', '22 july', 'journey', 'jungle', 'fast furious', 'the notebook', 'rust creek', 'bloodsh'];
-
-
-for (let a = 0; a < 6; a++) {
-  let move = prompt('can you guess any of my  moves? \n you have (' + (6 - a) + ') attempit');
-
+  let allmove;
   for (let i = 0; i < mymove.length; i++) {
-    if (move.toLowerCase() === mymove[i]) {
-      result = result + 1;
-      alert('you gused it ');
-      console.log('hello');
-      i = mymove.length;
-      a = 6;
-    }
+    allmove = allmove + '\n' + mymove[i];
+
   }
-
+  alert('my move are \n' + allmove);
 }
 
-
-let allmove;
-for (let i = 0; i < mymove.length; i++) {
-  allmove = allmove + '\n' + mymove[i];
-
-}
-alert('my move are \n' + allmove);
+q1();
+q2();
+q3();
+q4();
+q5();
+q6();
+q7();
 alert('this is your mark   ( ' + result + ' )');
 
