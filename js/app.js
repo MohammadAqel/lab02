@@ -4,7 +4,7 @@ let name1 = prompt('enter your name please');
 alert('you are wilcome ' + name1);
 function q1()
 {
-  let name2 = prompt('Is my name Mohammad?');
+  let name2 = prompt('Is my name Mohammad? (YES/NO/Y/N)');
   switch (name2.toUpperCase()) {
   case 'YES':
   case 'Y':
@@ -20,7 +20,7 @@ function q1()
   }
 }
 function q2(){
-  let size = prompt('Am I to Short?');
+  let size = prompt('Am I to Short? (YES/NO/Y/N)');
   switch (size.toUpperCase()) {
   case 'YES':
   case 'Y':
@@ -37,7 +37,7 @@ function q2(){
   }
 }
 function q3 () {
-  let major = prompt('Is my major software engineering?');
+  let major = prompt('Is my major software engineering? (yes/no/y/n)');
   switch (major.toLowerCase()) {
   case 'yes':
   case 'y':
@@ -54,7 +54,7 @@ function q3 () {
 }
 
 function q4(){
-  let talent = prompt('Do I  singer?');
+  let talent = prompt('Do I  singer? (yes/no/y/n)');
   switch (talent.toLowerCase()) {
   case 'yes':
   case 'y':
@@ -71,7 +71,7 @@ function q4(){
 }
 
 function q5(){
-  let car = prompt('Is my car type American ?');
+  let car = prompt('Is my car type American ? (yes/no/y/n)');
   switch (car.toLowerCase()) {
   case 'yes':
   case 'y':
@@ -81,7 +81,7 @@ function q5(){
   case 'no':
   case 'n':
     result = result + 1;
-    alert('NOOOO!');
+    alert('But I like it!');
     console.log(car);
     break;
   default:
