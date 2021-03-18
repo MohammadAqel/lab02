@@ -93,7 +93,7 @@ function q5(){
 function q6(){
   alert('You have 4 guesses, guess from 1-100');
   let answer = 80;
-  let guess = prompt('what is my wight ?');
+  let guess = prompt('what is my wight ? ( Please enter a number only )');
 
   for (let i = 0; i < 3; i++) {
 
