@@ -95,7 +95,7 @@ function q6(){
   let answer = 80;
   let guess = prompt('what is my wight ?');
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 3; i++) {
 
     if (answer === Number(guess))
     {
@@ -110,9 +110,9 @@ function q6(){
       guess = prompt('you are very low    Try Again');
 
     }
-    console.log(i);
-    if (i===4){
-      alert('you are false and this is true answer'+answer);
+    console.log(Number(i));
+    if (i===2){
+      alert('you are false and this is true answer  '+answer);
 
     }
   }
